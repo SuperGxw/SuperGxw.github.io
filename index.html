@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>SuperGxw</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="这是一个简单的个人博客，用来记录技术笔记~~~">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SuperGxw">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="SuperGxw">
+<meta property="og:description" content="这是一个简单的个人博客，用来记录技术笔记~~~">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Super_gxw">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="SuperGxw" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("your_app_id", "your_app_key");</script>
+
+<script src="/js/Counter.js"></script>
+
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/avatar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">Super_gxw</a></h1>
+		</hgroup>
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>Tags</a>
+						<a>Links</a>
+						<a>About</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/SuperGxw" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="mailto:xiaowgao@163.com" title="mail">mail</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+						<!-- music -->
+						
+							<!-- <div style="position: absolute; bottom: 120px; left: auto; width: 85%;"> -->
+							<div style="position: absolute; left: auto; width: 85%;">
+								<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=1354629987&auto=1&height=66"></iframe>
+							</div>
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/NLP/" style="font-size: 10px;">NLP</a> <a href="/tags/Transformer/" style="font-size: 10px;">Transformer</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 10px;">个人博客搭建</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 15px;">工具</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">工具介绍</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/" style="font-size: 20px;">技术分析</a> <a href="/tags/%E7%90%86%E8%AE%BA/" style="font-size: 15px;">理论</a> <a href="/tags/%E8%82%A1%E7%A5%A8/" style="font-size: 20px;">股票</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">在读研究生，研究领域为机器学习、数据挖掘以及自然语言处理。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/SuperGxw" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="mailto:xiaowgao@163.com" title="mail">mail</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-stockAnalysis5" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/02/02/stockAnalysis5/" class="article-date">
+  	<time datetime="2023-02-02T05:28:23.000Z" itemprop="datePublished">2023-02-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/02/02/stockAnalysis5/">
+        K线分析：价格形态及其基本操作要领
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>前面介绍了常用的单根K线以及K线组合的意义，接下来就来学习一下价格形态。价格形态同样也是技术分析的重要工具之一。非常之重要，这一节主要记录一下什么是价格形态以及价格形态的基本操作要领。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/" rel="tag">技术分析</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%82%A1%E7%A5%A8/" rel="tag">股票</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84%E5%AD%A6%E4%B9%A0/">投资学习</a><a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84%E5%AD%A6%E4%B9%A0/%E7%AC%94%E8%AE%B0/">笔记</a>
+	</div>
+
+
+      
+        
+<div class="counter-tag counter">
+    <span id="/2023/02/02/stockAnalysis5/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="K线分析：价格形态及其基本操作要领">
+         &nbsp;
+        view
+    </span>
+</div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2023/02/02/stockAnalysis5/#more">learn more >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-stockAnalysis4" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/01/31/stockAnalysis4/" class="article-date">
+  	<time datetime="2023-01-31T13:18:46.000Z" itemprop="datePublished">2023-01-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/01/31/stockAnalysis4/">
+        单根K线、K线组合分析以及操作意义
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>K线分析主要单根K线分析以及组合K线分析。这一节先记录以下单根K线分析。单根K线分析有很多不同的形状。有红的、绿的、大的、小的、长的、短的等等。不同类型的K线代表着不同的意义，而不同的K线组合又有着不同的意义。这里主要来说明一下不同类型的单根K线所代表的意义、K线组合以及操作建议。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/" rel="tag">技术分析</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%82%A1%E7%A5%A8/" rel="tag">股票</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84%E5%AD%A6%E4%B9%A0/">投资学习</a><a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84%E5%AD%A6%E4%B9%A0/%E7%AC%94%E8%AE%B0/">笔记</a>
+	</div>
+
+
+      
+        
+<div class="counter-tag counter">
+    <span id="/2023/01/31/stockAnalysis4/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="单根K线、K线组合分析以及操作意义">
+         &nbsp;
+        view
+    </span>
+</div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2023/01/31/stockAnalysis4/#more">learn more >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-stockAnalysis3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/01/30/stockAnalysis3/" class="article-date">
+  	<time datetime="2023-01-30T08:10:02.000Z" itemprop="datePublished">2023-01-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/01/30/stockAnalysis3/">
+        三大前提和四大要素
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="什么是三个前提和四个要素？"><a href="#什么是三个前提和四个要素？" class="headerlink" title="什么是三个前提和四个要素？"></a>什么是三个前提和四个要素？</h4><p>股票技术分析有三个前提及四个要素。其中三个前提是指：1）市场行为能包容和消化一切、2）价格以趋势的方式演变、3）历史会重演。四个要素则是指：1）价格、2）成交量、3）时间、4）空间</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/" rel="tag">技术分析</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%90%86%E8%AE%BA/" rel="tag">理论</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%82%A1%E7%A5%A8/" rel="tag">股票</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84%E5%AD%A6%E4%B9%A0/">投资学习</a><a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84%E5%AD%A6%E4%B9%A0/%E7%AC%94%E8%AE%B0/">笔记</a>
+	</div>
+
+
+      
+        
+<div class="counter-tag counter">
+    <span id="/2023/01/30/stockAnalysis3/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="三大前提和四大要素">
+         &nbsp;
+        view
+    </span>
+</div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2023/01/30/stockAnalysis3/#more">learn more >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-stockAnalysisTools" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/01/26/stockAnalysisTools/" class="article-date">
+  	<time datetime="2023-01-26T07:56:22.000Z" itemprop="datePublished">2023-01-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/01/26/stockAnalysisTools/">
+        主流技术分析门派和工具
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="K线分析"><a href="#K线分析" class="headerlink" title="K线分析"></a>K线分析</h4><p>K线起源于日本德川幕府时代，用来记录大米市场加个波动。后来逐渐引入到股票和期货市场。所以说K线图在亚洲用的很多，尤其在中国和整个东南亚地区用的最多。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/" rel="tag">工具介绍</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/" rel="tag">技术分析</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%82%A1%E7%A5%A8/" rel="tag">股票</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84%E5%AD%A6%E4%B9%A0/">投资学习</a><a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84%E5%AD%A6%E4%B9%A0/%E7%AC%94%E8%AE%B0/">笔记</a>
+	</div>
+
+
+      
+        
+<div class="counter-tag counter">
+    <span id="/2023/01/26/stockAnalysisTools/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="主流技术分析门派和工具">
+         &nbsp;
+        view
+    </span>
+</div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2023/01/26/stockAnalysisTools/#more">learn more >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-stockAnalysis" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/01/24/stockAnalysis/" class="article-date">
+  	<time datetime="2023-01-24T14:44:25.000Z" itemprop="datePublished">2023-01-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/01/24/stockAnalysis/">
+        技术分析及它与基本面分析的关系（理论介绍）
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="什么是技术分析？"><a href="#什么是技术分析？" class="headerlink" title="什么是技术分析？"></a>什么是技术分析？</h4><p>技术分析是对证券市场的<font color="#dd0000">日常交易状态</font>，包括加个变动、交易量、趋势曲线形态等资料，<font color="#dd0000">按照时间顺序绘制成图形或图表，或者形成一定的指标系统</font>，然后针对这些图形、图表或指标系统进行研究和分析。也可以说技术分析就是<font color="#dd0000">针对股价的走势图形进行分析研究</font>，股价走势呈现各种形状和图形，这些图形看得多了就会发现有规律可循。下面举几个例子：</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/" rel="tag">技术分析</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%90%86%E8%AE%BA/" rel="tag">理论</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%82%A1%E7%A5%A8/" rel="tag">股票</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84%E5%AD%A6%E4%B9%A0/">投资学习</a><a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84%E5%AD%A6%E4%B9%A0/%E7%AC%94%E8%AE%B0/">笔记</a>
+	</div>
+
+
+      
+        
+<div class="counter-tag counter">
+    <span id="/2023/01/24/stockAnalysis/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="技术分析及它与基本面分析的关系（理论介绍）">
+         &nbsp;
+        view
+    </span>
+</div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2023/01/24/stockAnalysis/#more">learn more >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-transformer" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/01/15/transformer/" class="article-date">
+  	<time datetime="2023-01-15T14:21:00.000Z" itemprop="datePublished">2023-01-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/01/15/transformer/">
+        Transformer模型及源码详解
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h3><p>最近闲来无事，用Hexo+Github搭建了属于自己的个人博客，想着对之前阅读过的文献做一下总结加深印象、更好的理解该算法的细节以便使用。本文主要对Transformer模型进行总结讲解并对pytorch实现的版本源码进行解析。</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NLP/" rel="tag">NLP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Transformer/" rel="tag">Transformer</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/">论文精读</a>
+	</div>
+
+
+      
+        
+<div class="counter-tag counter">
+    <span id="/2023/01/15/transformer/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="Transformer模型及源码详解">
+         &nbsp;
+        view
+    </span>
+</div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2023/01/15/transformer/#more">learn more >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/01/12/Hexo/" class="article-date">
+  	<time datetime="2023-01-12T06:54:54.000Z" itemprop="datePublished">2023-01-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/01/12/Hexo/">
+        Hexo+Github搭建个人博客（Windows）
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近闲来无事，用Hexo+Github搭建了个人专属博客用来记录一些文献阅读笔记。完工之后先练练手，浅浅写个搭建记录。从零开始搭建属于自己的静态博客网站，使用Hexo博客框架部署到Github，可以在不用购买服务器的情况下拥有属于自己的博客网站。简直美滋滋！</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">个人博客搭建</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+	</div>
+
+
+      
+        
+<div class="counter-tag counter">
+    <span id="/2023/01/12/Hexo/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="Hexo+Github搭建个人博客（Windows）">
+         &nbsp;
+        view
+    </span>
+</div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+        <p class="article-more-link">
+          <a  href="/2023/01/12/Hexo/#more">learn more >></a>
+        </p>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+  
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2023 Super_gxw
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: true,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>

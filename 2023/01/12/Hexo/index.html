@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo+Github搭建个人博客（Windows） | SuperGxw</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言最近闲来无事，用Hexo+Github搭建了个人专属博客用来记录一些文献阅读笔记。完工之后先练练手，浅浅写个搭建记录。从零开始搭建属于自己的静态博客网站，使用Hexo博客框架部署到Github，可以在不用购买服务器的情况下拥有属于自己的博客网站。简直美滋滋！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+Github搭建个人博客（Windows）">
+<meta property="og:url" content="http://example.com/2023/01/12/Hexo/index.html">
+<meta property="og:site_name" content="SuperGxw">
+<meta property="og:description" content="前言最近闲来无事，用Hexo+Github搭建了个人专属博客用来记录一些文献阅读笔记。完工之后先练练手，浅浅写个搭建记录。从零开始搭建属于自己的静态博客网站，使用Hexo博客框架部署到Github，可以在不用购买服务器的情况下拥有属于自己的博客网站。简直美滋滋！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/01/12/Hexo/nodejs.png">
+<meta property="og:image" content="http://example.com/2023/01/12/Hexo/npm.png">
+<meta property="og:image" content="http://example.com/2023/01/12/Hexo/git.png">
+<meta property="og:image" content="http://example.com/2023/01/12/Hexo/create.png">
+<meta property="og:image" content="http://example.com/2023/01/12/Hexo/sshkey.png">
+<meta property="og:image" content="http://example.com/2023/01/12/Hexo/ssh.png">
+<meta property="og:image" content="http://example.com/2023/01/12/Hexo/init.png">
+<meta property="og:image" content="http://example.com/2023/01/12/Hexo/config.png">
+<meta property="og:image" content="http://example.com/2023/01/12/Hexo/address.png">
+<meta property="article:published_time" content="2023-01-12T06:54:54.000Z">
+<meta property="article:modified_time" content="2023-01-30T07:00:24.398Z">
+<meta property="article:author" content="Super_gxw">
+<meta property="article:tag" content="个人博客搭建">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/01/12/Hexo/nodejs.png">
+  
+    <link rel="alternative" href="/atom.xml" title="SuperGxw" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("your_app_id", "your_app_key");</script>
+
+<script src="/js/Counter.js"></script>
+
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/avatar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">Super_gxw</a></h1>
+		</hgroup>
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>Tags</a>
+						<a>Links</a>
+						<a>About</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/SuperGxw" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="mailto:xiaowgao@163.com" title="mail">mail</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+						<!-- music -->
+						
+							<!-- <div style="position: absolute; bottom: 120px; left: auto; width: 85%;"> -->
+							<div style="position: absolute; left: auto; width: 85%;">
+								<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=1354629987&auto=1&height=66"></iframe>
+							</div>
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/NLP/" style="font-size: 10px;">NLP</a> <a href="/tags/Transformer/" style="font-size: 10px;">Transformer</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 10px;">个人博客搭建</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 15px;">工具</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">工具介绍</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/" style="font-size: 20px;">技术分析</a> <a href="/tags/%E7%90%86%E8%AE%BA/" style="font-size: 15px;">理论</a> <a href="/tags/%E8%82%A1%E7%A5%A8/" style="font-size: 20px;">股票</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">在读研究生，研究领域为机器学习、数据挖掘以及自然语言处理。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/SuperGxw" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="mailto:xiaowgao@163.com" title="mail">mail</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/01/12/Hexo/" class="article-date">
+  	<time datetime="2023-01-12T06:54:54.000Z" itemprop="datePublished">2023-01-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo+Github搭建个人博客（Windows）
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">个人博客搭建</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+	</div>
+
+
+        
+          
+<div class="counter-tag counter">
+    <span id="/2023/01/12/Hexo/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="Hexo+Github搭建个人博客（Windows）">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近闲来无事，用Hexo+Github搭建了个人专属博客用来记录一些文献阅读笔记。完工之后先练练手，浅浅写个搭建记录。从零开始搭建属于自己的静态博客网站，使用Hexo博客框架部署到Github，可以在不用购买服务器的情况下拥有属于自己的博客网站。简直美滋滋！</p>
+<span id="more"></span>
+<h3 id="一-准备工具"><a href="#一-准备工具" class="headerlink" title="一 准备工具"></a>一 准备工具</h3><h4 id="1-1-Node-js"><a href="#1-1-Node-js" class="headerlink" title="1.1 Node.js"></a>1.1 Node.js</h4><ul>
+<li><p>由于Hexo需要Node.js支持，因此需要先下载安装Node.js，这里直接到<a target="_blank" rel="noopener" href="https://nodejs.org/en/">官网</a>选择最新的LTS（长期支持版）即可。（安装过程就不再详细介绍了，参考相关博客即可，当然，如果有时间后续会专门写一个Node.js安装博客）。安装完成后会附带有包管理工具npm。</p>
+</li>
+<li><p>验证是否安装成功。win+R，输入cmd打开控制台，输入以下命令:</p>
+<ul>
+<li><p><code>node -v</code>：显示安装的Node.js版本</p>
+<p><img src="/2023/01/12/Hexo/nodejs.png" alt="nodejs"></p>
+</li>
+<li><p><code>npm -v</code>：显示安装的npm版本</p>
+<p><img src="/2023/01/12/Hexo/npm.png" alt="npm"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-2-Git"><a href="#1-2-Git" class="headerlink" title="1.2 Git"></a>1.2 Git</h4><ul>
+<li><p>Git简介：Git是一个开源的分布式版本控制软件,用以有效、高速的处理从很小到非常大的项目版本管理。GitHub是一个基于Git的远程文件托管平台。</p>
+</li>
+<li><p>安装过程不再详细介绍，参考相关博客，直接到<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">官网</a>下载并进行安装配置。</p>
+</li>
+<li><p>验证是否安装成功。在cmd控制台输入以下命令：</p>
+<ul>
+<li><p><code>git --version</code>：显示安装的Git版本</p>
+<p><img src="/2023/01/12/Hexo/git.png" alt="git"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-3-Hexo"><a href="#1-3-Hexo" class="headerlink" title="1.3 Hexo"></a>1.3 Hexo</h4><ul>
+<li><p>准备Hexo之前，这里先简单介绍一下。Hexo是一款快速、简洁、高效的博客框架。主要有以下几个特点：</p>
+<ul>
+<li>速度快：使用Node.js生成页面，每秒可以构造数百个文件。</li>
+<li>支持Markdown语法：可以使用Markdown解析渲染文章，非常方便。</li>
+<li>部署简单：只需要一个指令便可将博客提交至Github或是其他个人网页。</li>
+</ul>
+</li>
+<li><p>安装Hexo</p>
+<ul>
+<li>npm安装命令：<code>nmp install hexo-cli -g</code></li>
+</ul>
+</li>
+<li><p>验证是否安装成功。在cmd控制台输入以下命令：</p>
+<ul>
+<li><code>hexo -v</code> ：显示安装的Hexo版本</li>
+</ul>
+</li>
+</ul>
+<h3 id="二-搭建仓库"><a href="#二-搭建仓库" class="headerlink" title="二 搭建仓库"></a>二 搭建仓库</h3><ul>
+<li><p>新建一个名为username.github.io的仓库（<strong>注意</strong>：username为Github用户名，否则无效）</p>
+<p><img src="/2023/01/12/Hexo/create.png" alt="create"></p>
+</li>
+</ul>
+<h3 id="三-生成SSH-Keys"><a href="#三-生成SSH-Keys" class="headerlink" title="三 生成SSH Keys"></a>三 生成SSH Keys</h3><p>提交代码需要Github 权限才可以，但是直接使用用户名和密码太不安全了，所以使用ssh key 来解决本地和服务器的连接问题。</p>
+<ul>
+<li><p>生成ssh：</p>
+<ul>
+<li><p>打开命令行工具（Git Bash Here），输入命令：<code>ssh-keygen -t rsa -C &quot;email address&quot;</code>生成.ssh密匙。</p>
+</li>
+<li><p>执行命令成功之后会在 <code>C:\Users\用户名\</code>目录下生成一个.ssh文件夹。打开该文件夹找到<code>id_rsa.pub</code>文件，用记事本打开复制里面的内容。</p>
+</li>
+<li><p>打开github主页，进入Setting -&gt; SSH and GPG keys -&gt; New SSH key，把复制的内容粘贴进去，title 随便填，保存以后这样公钥就添加成功了，设置好如下图:</p>
+<p><img src="/2023/01/12/Hexo/sshkey.png" alt="sshkey"></p>
+</li>
+</ul>
+</li>
+<li><p>测试ssh是否绑定成功：</p>
+<ul>
+<li><p><code>ssh -T git@github.com</code></p>
+<p><img src="/2023/01/12/Hexo/ssh.png" alt="ssh"></p>
+</li>
+</ul>
+</li>
+<li><p>配置github：</p>
+<ul>
+<li><code>git config --global user.name &quot;username&quot;</code>，username是用户名</li>
+<li><code>git config --global user.email &quot;register email&quot;</code>，register email是Github的注册邮箱</li>
+</ul>
+</li>
+</ul>
+<h3 id="四-本地生成博客"><a href="#四-本地生成博客" class="headerlink" title="四 本地生成博客"></a>四 本地生成博客</h3><ul>
+<li><p>初始化hexo</p>
+<ul>
+<li><p>在一个路径下新建一个文件夹（名字随意）作为存放代码的地方，例如我这里是<code>D:\Blog</code>。</p>
+</li>
+<li><p>在<code>D:\Blog</code>文件夹下右键打开命令行工具（Git Bash Here），输入命令<code>hexo init</code>进行初始化。</p>
+<p><img src="/2023/01/12/Hexo/init.png" alt="init"></p>
+</li>
+<li><p>Hexo会自动下载一些文件到该目录下，其中<code>_config.yml</code>是配置文件，<code>source</code>文件夹存放的是博客内容的源文件（.md文件），<code>themes</code>文件夹下存放的是hexo主题文件。</p>
+</li>
+</ul>
+</li>
+<li><p>生成html文件</p>
+<ul>
+<li><code>hexo g</code>：执行该命令，会在public文件夹下生成相关的html文件（将来需要提交至Github）。</li>
+</ul>
+</li>
+<li><p>本地预览</p>
+<ul>
+<li><code>hexo s</code>： 执行该命令，可以开启本地预览服务，打开浏览器访问<code>http://localhost:4000/</code>就可以看到博客内容了。</li>
+</ul>
+</li>
+</ul>
+<h3 id="五-部署至Github"><a href="#五-部署至Github" class="headerlink" title="五 部署至Github"></a>五 部署至Github</h3><ul>
+<li><p>在<code>D:\Blog</code>文件目录下安装<code>hexo-deployer-git</code>插件，执行命令为：<code>npm install hexo-deployer-git --save</code>。</p>
+</li>
+<li><p>修改配置文件，打开<code>D:\Blog</code>目录下的<code>_config.yml</code>文件并进行编辑，在末尾添加如下内容：</p>
+<p><img src="/2023/01/12/Hexo/config.png" alt="config"></p><p></p>
+<p>其中repository后的内容为前面创建的Github仓库的地址。</p>
+<p><img src="/2023/01/12/Hexo/address.png" alt="address"></p>
+</li>
+<li><p>在<code>D:\Blog</code>文件夹下右键打开命令行工具（Git Bash Here），输入命令<code>hexo d</code>将本地博客推送到Github远程仓库。推送成功之后可通过链接<a target="_blank" rel="noopener" href="https://supergxw.github.io/">https://supergxw.github.io/</a>访问个人博客。至此，Hexo+Github搭建的个人博客就完工了！</p>
+</li>
+</ul>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/01/15/transformer/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          Transformer模型及源码详解
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2023 Super_gxw
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>K线分析：价格形态及其基本操作要领 | SuperGxw</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言前面介绍了常用的单根K线以及K线组合的意义，接下来就来学习一下价格形态。价格形态同样也是技术分析的重要工具之一。非常之重要，这一节主要记录一下什么是价格形态以及价格形态的基本操作要领。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="K线分析：价格形态及其基本操作要领">
+<meta property="og:url" content="http://example.com/2023/02/02/stockAnalysis5/index.html">
+<meta property="og:site_name" content="SuperGxw">
+<meta property="og:description" content="前言前面介绍了常用的单根K线以及K线组合的意义，接下来就来学习一下价格形态。价格形态同样也是技术分析的重要工具之一。非常之重要，这一节主要记录一下什么是价格形态以及价格形态的基本操作要领。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-02T05:28:23.000Z">
+<meta property="article:modified_time" content="2023-02-02T08:42:49.026Z">
+<meta property="article:author" content="Super_gxw">
+<meta property="article:tag" content="股票">
+<meta property="article:tag" content="技术分析">
+<meta property="article:tag" content="工具">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="SuperGxw" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("your_app_id", "your_app_key");</script>
+
+<script src="/js/Counter.js"></script>
+
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/avatar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">Super_gxw</a></h1>
+		</hgroup>
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>Tags</a>
+						<a>Links</a>
+						<a>About</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/SuperGxw" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="mailto:xiaowgao@163.com" title="mail">mail</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+						<!-- music -->
+						
+							<!-- <div style="position: absolute; bottom: 120px; left: auto; width: 85%;"> -->
+							<div style="position: absolute; left: auto; width: 85%;">
+								<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=1354629987&auto=1&height=66"></iframe>
+							</div>
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/NLP/" style="font-size: 10px;">NLP</a> <a href="/tags/Transformer/" style="font-size: 10px;">Transformer</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 10px;">个人博客搭建</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 15px;">工具</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">工具介绍</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/" style="font-size: 20px;">技术分析</a> <a href="/tags/%E7%90%86%E8%AE%BA/" style="font-size: 15px;">理论</a> <a href="/tags/%E8%82%A1%E7%A5%A8/" style="font-size: 20px;">股票</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">在读研究生，研究领域为机器学习、数据挖掘以及自然语言处理。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/SuperGxw" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="mailto:xiaowgao@163.com" title="mail">mail</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-stockAnalysis5" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/02/02/stockAnalysis5/" class="article-date">
+  	<time datetime="2023-02-02T05:28:23.000Z" itemprop="datePublished">2023-02-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      K线分析：价格形态及其基本操作要领
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/" rel="tag">技术分析</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%82%A1%E7%A5%A8/" rel="tag">股票</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84%E5%AD%A6%E4%B9%A0/">投资学习</a><a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84%E5%AD%A6%E4%B9%A0/%E7%AC%94%E8%AE%B0/">笔记</a>
+	</div>
+
+
+        
+          
+<div class="counter-tag counter">
+    <span id="/2023/02/02/stockAnalysis5/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="K线分析：价格形态及其基本操作要领">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>前面介绍了常用的单根K线以及K线组合的意义，接下来就来学习一下价格形态。价格形态同样也是技术分析的重要工具之一。非常之重要，这一节主要记录一下什么是价格形态以及价格形态的基本操作要领。</p>
+<span id="more"></span>
+<h4 id="价格形态"><a href="#价格形态" class="headerlink" title="价格形态"></a>价格形态</h4><p>首先第一个问题就是什么是价格形态？<font color="#dd0000">价格形态</font>是指股价在一段时间内形成的各种“几何图形”。价格形态也被称为<font color="#dd0000">技术形态</font>。价格形态是经验总结，不断重复出现，而且有规律，在操作方面具有指导意义。价格形态分析在中国一直有效。</p>
+<p><strong>价格形态是在酝酿行情</strong></p>
+<ul>
+<li>股价不是只有上涨或者下跌趋势，大部分时间都在震荡。</li>
+<li>行情震荡期间会形成各种价格形态，一旦完成后，将决定市场到底朝着哪个方向发展。</li>
+</ul>
+<p><strong>价格形态分为两种：反转形态和持续形态</strong></p>
+<p>反转形态：之后价格会出现反转，不是头部，就是底部。</p>
+<ul>
+<li>反转形态有头肩顶形态、头肩底形态、双重顶形态、双重底形态、三重顶形态、三重底形态、圆弧顶形态、圆弧底形态等。</li>
+</ul>
+<p>持续形态：是指股价中途震荡修正，之后再延续此前的趋势。</p>
+<ul>
+<li>持续形态有三角形持续形态、旗形持续形态、楔形持续形态、矩形持续形态、菱形持续形态等。</li>
+</ul>
+<p><strong>价格形态的测算技术：</strong>种价格形态的形状完全不同，一目了然。其能够帮助我们判断形态突破之后的上涨或下跌目标，具有测算技术。</p>
+<h4 id="价格形态的操作要领"><a href="#价格形态的操作要领" class="headerlink" title="价格形态的操作要领"></a>价格形态的操作要领</h4><p>运用反转价格形态时，有5条重要原则：</p>
+<ul>
+<li><font color="#dd0000">事先存在趋势的必要性。</font>反转形态是指趋势的反转，趋势的存在是前提条件。反转形态一旦确立，最小和最大的价格目标位都会出现。最大的价格目标位是前一轮趋势的全部幅度。</li>
+<li><font color="#dd0000">重要趋势线的突破。</font>反转过程进场通常以突破重要的趋势线为前兆。趋势破坏之后有两种情况，一种是直接反转，上涨趋势转为下跌趋势，另一种是转变为震荡市，之后维持之前趋势。</li>
+<li><font color="#dd0000">规模越大，市场影响越大。</font>“规模”是指价格形态的高度和宽度。“高度”指价格波动的区间大小。“宽度”是指价格形态完成所花的时间长短。</li>
+<li><p><font color="#dd0000">顶部形态和底部形态的差别。</font></p>
+<ul>
+<li>顶部形态通常比底部形态持续时间短，波动更加剧烈。相反顶部形态通常比底部形态持续时间长，波动幅度更加小。</li>
+<li>在熊市底部震荡时，市场人气低迷，资金外流，价格波动就越来越小。而到了牛市顶部时期，市场人气旺，大量资金进场，价格波动越来越大，见顶时间很快。</li>
+<li>顶部时间很短，投资者主要以趋势投资为主，涨起来很快，跌下去也很快。</li>
+</ul>
+</li>
+<li><p><font color="#dd0000">向上突破需要成交量配合。</font>上涨是一定需要成交量来推动的。下跌不需要成交量配合，熊市不断下跌，成交量一路萎缩。如果上涨突破不放量，很可能是假突破。</p>
+</li>
+</ul>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/01/31/stockAnalysis4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">单根K线、K线组合分析以及操作意义</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2023 Super_gxw
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>

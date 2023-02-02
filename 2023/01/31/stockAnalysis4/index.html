@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>单根K线、K线组合分析以及操作意义 | SuperGxw</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言K线分析主要单根K线分析以及组合K线分析。这一节先记录以下单根K线分析。单根K线分析有很多不同的形状。有红的、绿的、大的、小的、长的、短的等等。不同类型的K线代表着不同的意义，而不同的K线组合又有着不同的意义。这里主要来说明一下不同类型的单根K线所代表的意义、K线组合以及操作建议。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单根K线、K线组合分析以及操作意义">
+<meta property="og:url" content="http://example.com/2023/01/31/stockAnalysis4/index.html">
+<meta property="og:site_name" content="SuperGxw">
+<meta property="og:description" content="前言K线分析主要单根K线分析以及组合K线分析。这一节先记录以下单根K线分析。单根K线分析有很多不同的形状。有红的、绿的、大的、小的、长的、短的等等。不同类型的K线代表着不同的意义，而不同的K线组合又有着不同的意义。这里主要来说明一下不同类型的单根K线所代表的意义、K线组合以及操作建议。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_1.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_2.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_3.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_4.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_5.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_6.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_7.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_8.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_9.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_10.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_11.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_12.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_13.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_14.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_15.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_16.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_17.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_18.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_19.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_20.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_21.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_22.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_23.png">
+<meta property="og:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line_24.png">
+<meta property="article:published_time" content="2023-01-31T13:18:46.000Z">
+<meta property="article:modified_time" content="2023-02-02T05:29:00.593Z">
+<meta property="article:author" content="Super_gxw">
+<meta property="article:tag" content="股票">
+<meta property="article:tag" content="技术分析">
+<meta property="article:tag" content="工具">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/01/31/stockAnalysis4/k_line.png">
+  
+    <link rel="alternative" href="/atom.xml" title="SuperGxw" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("your_app_id", "your_app_key");</script>
+
+<script src="/js/Counter.js"></script>
+
+  
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/avatar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">Super_gxw</a></h1>
+		</hgroup>
+
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>Tags</a>
+						<a>Links</a>
+						<a>About</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/SuperGxw" title="github">github</a>
+					        
+								<a class="mail" target="_blank" href="mailto:xiaowgao@163.com" title="mail">mail</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+						<!-- music -->
+						
+							<!-- <div style="position: absolute; bottom: 120px; left: auto; width: 85%;"> -->
+							<div style="position: absolute; left: auto; width: 85%;">
+								<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=1354629987&auto=1&height=66"></iframe>
+							</div>
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/NLP/" style="font-size: 10px;">NLP</a> <a href="/tags/Transformer/" style="font-size: 10px;">Transformer</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 10px;">个人博客搭建</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 15px;">工具</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">工具介绍</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/" style="font-size: 20px;">技术分析</a> <a href="/tags/%E7%90%86%E8%AE%BA/" style="font-size: 15px;">理论</a> <a href="/tags/%E8%82%A1%E7%A5%A8/" style="font-size: 20px;">股票</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">在读研究生，研究领域为机器学习、数据挖掘以及自然语言处理。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/SuperGxw" title="github">github</a>
+			        
+						<a class="mail" target="_blank" href="mailto:xiaowgao@163.com" title="mail">mail</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-stockAnalysis4" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/01/31/stockAnalysis4/" class="article-date">
+  	<time datetime="2023-01-31T13:18:46.000Z" itemprop="datePublished">2023-01-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      单根K线、K线组合分析以及操作意义
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/" rel="tag">技术分析</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%82%A1%E7%A5%A8/" rel="tag">股票</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84%E5%AD%A6%E4%B9%A0/">投资学习</a><a class="article-category-link" href="/categories/%E6%8A%95%E8%B5%84%E5%AD%A6%E4%B9%A0/%E7%AC%94%E8%AE%B0/">笔记</a>
+	</div>
+
+
+        
+          
+<div class="counter-tag counter">
+    <span id="/2023/01/31/stockAnalysis4/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="单根K线、K线组合分析以及操作意义">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>K线分析主要单根K线分析以及组合K线分析。这一节先记录以下单根K线分析。单根K线分析有很多不同的形状。有红的、绿的、大的、小的、长的、短的等等。不同类型的K线代表着不同的意义，而不同的K线组合又有着不同的意义。这里主要来说明一下不同类型的单根K线所代表的意义、K线组合以及操作建议。</p>
+<span id="more"></span>
+<h4 id="什么是K线？"><a href="#什么是K线？" class="headerlink" title="什么是K线？"></a>什么是K线？</h4><p>在前面的笔记中已经简单介绍了K线。一根K线能够反映出开盘价、收盘价、最高价以及最低价。基本的分类有两种，一个叫阳线，一个叫阴线。在看盘软件上，看到的红色的K线就是阳线，绿色的K线就是阴线。如果收盘价高于开盘价就是阳线，反之则是阴线。简单来说就是上涨了就是阳线，下跌了就是阴线。下面来认识一下不同的K线形状以及K线组合。</p>
+<h4 id="单根K线的类型及意义"><a href="#单根K线的类型及意义" class="headerlink" title="单根K线的类型及意义"></a>单根K线的类型及意义</h4><p><img src="/2023/01/31/stockAnalysis4/k_line.png" alt="k_line"></p>
+<ol>
+<li><p>K线形状一：大阳线</p>
+<ul>
+<li>大阳线实体部分较长，说明收盘价比开盘价要高出很多。</li>
+<li>大阳线出现说明市场买方力量强劲，后期应继续看好。</li>
+<li>大阳线中没有上下影线称为光头光脚大阳线。说明当天的开盘价就是最低价，收盘价就是最高价，后市继续看好。</li>
+</ul>
+</li>
+<li><p>K线形状二：大阴线</p>
+<ul>
+<li><p>大阴线说明当天几乎最高点开盘，然后最低点收盘，说明空方力量明显占优。</p>
+</li>
+<li><p>大阴线实体越长，说明当天跌的越多。</p>
+</li>
+<li><p>欧美各国用绿色的K线代表上涨，红色代表下跌。</p>
+</li>
+<li><p>大阴线通常说明股价还会下跌，后市不被看好，但也有例外。如果是高位的大阴线破位是强烈看跌的信号。如果是股价长期下跌后的大阴线很有可能是反转信号。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_1.png" alt="k_line_1"></p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_2.png" alt="k_line_2"></p>
+</li>
+<li><p>大阴线中没有上下影线称为光头光脚大阴线。说明当天的开盘价就是最高价，收盘价就是最低价，是最不好的走势。</p>
+</li>
+<li><p>一般来说涨跌幅度超过6%被称为大阴线或者大阳线。</p>
+</li>
+</ul>
+<blockquote>
+<p>股市的涨跌永远都是多空力量的相互转换。当空头彻底消灭多方的时候，股价将跌无可跌。反之，当多头彻底消灭空头的时候，股价也没有上涨空间了。</p>
+</blockquote>
+</li>
+<li><p>K线形状三：小阴线和小阳线</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_3.png" alt="k_line_3"></p>
+<ul>
+<li>小阳线表示上涨幅度不大，多方略微占优。</li>
+<li>小阴线表示下跌幅度不大，空头略微占优。</li>
+<li>小阴线和小阳线一般在多空力量相当的情况出现，如震荡市行情。</li>
+<li>一般来说涨跌幅度小于3%被称为小阴线或者小阳线。</li>
+</ul>
+</li>
+<li><p>K线形状四：中阴线和中阳线</p>
+<ul>
+<li>比小阴线和小阳线实体更大一点的就是中阴线和中阳线。</li>
+<li>一般来说涨跌幅度超过3%小于6%被称为中阴线或者中阳线。</li>
+</ul>
+</li>
+<li><p>K线形状五：长影K线</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_4.png" alt="k_line_4"></p>
+<ul>
+<li><p>长上影K线说明当天多方一度占优较大，但因空方打压或利空消息而在尾盘有所回落。</p>
+</li>
+<li><p>长上影K线技术信号不明确，后市不一定看跌。</p>
+</li>
+<li><p>长上影K线在特定阶段被称为“仙人指路”。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_5.png" alt="k_line_5"></p>
+</li>
+<li><p>长上影K线出现在高位，说明上方压力巨大，后市就不看好。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_6.png" alt="k_line_6"></p>
+</li>
+<li><p>下影线越长，下方支撑越强，上影线越长，上方阻力越大。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_7.png" alt="k_line_7"></p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_8.png" alt="k_line_8"></p>
+</li>
+<li><p>连续几天出现长下影K线，是看多信号，后市更加看好。</p>
+</li>
+</ul>
+</li>
+<li><p>K线形状六：十字星</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_9.png" alt="k_line_9"></p>
+<ul>
+<li>高位和低位十字星都是行情逆转的信号。</li>
+<li>行情中途出现十字星一般是调整或反弹结束的信号。</li>
+<li>震荡行情中出现十字星就是要突破震荡市的信号。</li>
+</ul>
+</li>
+<li><p>K线形状七：T字形和倒T形</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_10.png" alt="k_line_10"></p>
+<ul>
+<li>T字形K线对后市多方有利。</li>
+<li>T字形K线出现在股价的相对低位，是明显的看多信号。</li>
+<li>倒T形线说明股价冲高回落，收盘价和开盘价一样，是明显的看空信号。</li>
+</ul>
+</li>
+<li><p>K线形状八：一字型</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_11.png" alt="k_line_11"></p>
+<ul>
+<li>一字涨停是突然出现利好消息买也买不到；一字跌停是突然出现利空消息卖也卖不掉。</li>
+</ul>
+</li>
+</ol>
+<h4 id="常见的K线组合及意义"><a href="#常见的K线组合及意义" class="headerlink" title="常见的K线组合及意义"></a>常见的K线组合及意义</h4><ol>
+<li><p>K线组合一：三阳开泰</p>
+<ul>
+<li><p>连续出现三根中阳或大阳线，股价在短时间内快速爆发上涨，呈现加速上涨态势。</p>
+</li>
+<li><p>股价连续三天大涨，股价上涨动力很大，是强烈的看多信号。</p>
+</li>
+<li><p>下跌趋势结束，上涨趋势开始。</p>
+</li>
+<li><p>三阳开泰一般是指低位的三根阳线，容易出现在底部形态的突破走势。举个例子来看：</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_12.png" alt="k_line_12"></p>
+</li>
+</ul>
+</li>
+<li><p>K线组合二：三个白武士</p>
+<ul>
+<li><p>三个白武士由三个短小的连续上升的阳线组成。</p>
+</li>
+<li><p>K线收盘价一天比一天高；每天的开盘价在昨天阳线的实体之间；三根阳线的上下影线比较短，收盘价几乎是当天最高价。</p>
+</li>
+<li><p>通常出现在见底回升的初期。</p>
+</li>
+<li><p>三个白武士的三根阳线大部分是重叠在一起的。</p>
+</li>
+<li><p>三阳开泰与之相比，上涨力度更大，阳线实体更大。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_13.png" alt="k_line_13"></p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>K线组合三：三只乌鸦</p>
+<ul>
+<li><p>三只乌鸦是指股票连续出现三根中阴线或者大阴线。</p>
+</li>
+<li><p>三只乌鸦是强烈的看空信号。</p>
+</li>
+<li><p>三只乌鸦容易出现在市场头部或者高位，尤其是从牛转熊的过程。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_14.png" alt="k_line_14"></p>
+</li>
+</ul>
+</li>
+<li><p>K线组合四：出水芙蓉</p>
+<ul>
+<li><p>出水芙蓉是K线和均线结合的技术图形。</p>
+</li>
+<li><p>股价经过一段时间的横盘整理；均线系统最后也粘合在一起；一根大阳线放量突破所有的均线系统；上涨行情就此展开。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_15.png" alt="k_line_15"></p>
+</li>
+<li><p>股价一定要经过一段时间的横盘整理。</p>
+</li>
+<li><p>股价突破均线系统那天阳线一定要大而且要放量。</p>
+</li>
+<li><p>在A股，出水芙蓉出现在很多大行情的开始。举个例子：</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_16.png" alt="k_line_16"></p>
+</li>
+</ul>
+</li>
+<li><p>K线组合五：断头铡刀</p>
+<ul>
+<li><p>断头铡刀和出水芙蓉相反，是高位放量阴线跌破均线系统。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_17.png" alt="k_line_17"></p>
+</li>
+<li><p>断头铡刀容易出现在市场头部和高位横盘。</p>
+</li>
+<li>如果三天之内不能收复这根大阴线，最好卖出，因为反弹之后是更大的下跌。</li>
+</ul>
+</li>
+<li><p>K线组合六：旭日东升</p>
+<ul>
+<li><p>在一段下跌行情的末期，如果先出现一根中阴线或者大阴线，第二天马上出现一个高开高走的中阳线或者大阳线，而且阳线收盘价比前一天阴线最高点还高。这就叫做旭日东升。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_18.png" alt="k_line_18"></p>
+</li>
+<li><p>通俗来说就是阳包阴，大阳线包掉大阴线，是比较明确的看涨信号。</p>
+</li>
+</ul>
+</li>
+<li><p>K线组合七：孕育线</p>
+<ul>
+<li><p>通常由一根光头阳线或者光头阴线+一根十字星线组成，而且十字星线的最高价和最低价都在前面一根K线的实体之内，又称为“身怀六甲”。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_19.png" alt="k_line_19"></p>
+</li>
+<li><p>孕育线预示着上涨或者下跌力量已经衰竭，股价即将要转势。</p>
+</li>
+<li>孕育线对趋势转折的信号并不强烈，还需通过其它技术指标来确认。</li>
+</ul>
+</li>
+<li><p>K线组合八：乌云盖顶</p>
+<ul>
+<li><p>处于上涨行情，出现一根中阳线或者大阳线之后第二天收出一根中阴线或者大阴线，形成阴盖阳走势。</p>
+</li>
+<li><p>是经典的看空K线组合，预示着空头的猛烈反击。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_20.png" alt="k_line_20"></p>
+</li>
+<li><p>出现乌云盖顶，后市强烈不被看好。要么直接见顶下跌，要么主升浪结束，后期股价还会震荡一段时间，还有一个缩量上涨的过程，然后才开始大跌。</p>
+</li>
+</ul>
+</li>
+<li><p>K线组合九：多方炮和空方炮</p>
+<ul>
+<li><p>多方炮简单说就是两阳夹一阴，指的是底部反复盘整，具有筑底功能，以夯实底部。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_21.png" alt="k_line_21"></p>
+</li>
+<li><p>上涨行情中途也可能出现，是多方为了继续向上发动行情进行中途震荡洗盘。</p>
+</li>
+<li><p>是比较强的看涨信号。</p>
+</li>
+<li><p>空方炮简单说就是两阴夹一阳，它的出现显示空头力量越来越强，而且坚决不退让，后市不看好。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_22.png" alt="k_line_22"></p>
+</li>
+</ul>
+</li>
+<li><p>K线组合十：早晨之星和黄昏之星</p>
+<ul>
+<li><p>早晨之星，第一天是一根大阴线，第二天是跳空下行的小阴线或小阳线，第三天则是一根大阳线，股价收复第一天的大部分失地。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_23.png" alt="k_line_23"></p>
+</li>
+<li><p>第一天大阴线：市场进入调整，第二天向下跳空开盘但是价格波动不大，下跌幅度明显减弱；第三天开盘价高于第二天收盘价，并且买盘踊跃，继续向上推高价格，市场趋势反转。</p>
+</li>
+<li><p>早晨之星：看涨组合。</p>
+</li>
+<li><p>黄昏之星：看跌组合。</p>
+<p><img src="/2023/01/31/stockAnalysis4/k_line_24.png" alt="k_line_24"></p>
+</li>
+</ul>
+</li>
+</ol>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/02/02/stockAnalysis5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          K线分析：价格形态及其基本操作要领
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/01/30/stockAnalysis3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">三大前提和四大要素</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2023 Super_gxw
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
