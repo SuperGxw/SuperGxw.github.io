@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-02T08:42:49.026Z</updated>
+  <updated>2023-02-08T10:53:10.104Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AliCoCo：阿里电商概念图谱构建方案</title>
+    <link href="http://example.com/2023/02/08/AliCoCo/"/>
+    <id>http://example.com/2023/02/08/AliCoCo/</id>
+    <published>2023-02-08T10:33:12.000Z</published>
+    <updated>2023-02-08T10:53:10.104Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>&lt;— more —&gt;</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&amp;lt;— more —&amp;gt;&lt;/p&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/spoiler.css&quot; ty</summary>
+      
+    
+    
+    
+    <category term="论文精读" scheme="http://example.com/categories/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/"/>
+    
+    
+    <category term="AliCoCo" scheme="http://example.com/tags/AliCoCo/"/>
+    
+    <category term="知识图谱" scheme="http://example.com/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
+    
+  </entry>
   
   <entry>
     <title>K线分析：价格形态及其基本操作要领</title>
