@@ -16,20 +16,20 @@
 <meta property="og:site_name" content="SuperGxw">
 <meta property="og:description" content="1 前言电商技术进入认知智能时代，在搜索推荐等电商核心业务场景上使用电商认知图谱，将给亿万用户带来更加智能的购物体验。本文就阿里搜索推荐事业部认知图谱团队2020年提出的电商认知图谱的构建方法（AliCoCo）做一个总结。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2023/02/08/AliCoCo/Users/HP/Desktop/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%9B%B8%E5%85%B3/AliCoCo/AliCoCo_1.png">
-<meta property="og:image" content="http://example.com/2023/02/08/AliCoCo/Users/HP/Desktop/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%9B%B8%E5%85%B3/AliCoCo/AliCoCo_3.png">
-<meta property="og:image" content="http://example.com/2023/02/08/AliCoCo/Users/HP/Desktop/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%9B%B8%E5%85%B3/AliCoCo/AliCoCo_4.png">
-<meta property="og:image" content="http://example.com/2023/02/08/AliCoCo/Users/HP/Desktop/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%9B%B8%E5%85%B3/AliCoCo/AliCoCo_5.png">
-<meta property="og:image" content="http://example.com/2023/02/08/AliCoCo/Users/HP/Desktop/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%9B%B8%E5%85%B3/AliCoCo/AliCoCo_6.png">
-<meta property="og:image" content="http://example.com/2023/02/08/AliCoCo/Users/HP/Desktop/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%9B%B8%E5%85%B3/AliCoCo/AliCoCo_7.png">
-<meta property="og:image" content="http://example.com/2023/02/08/AliCoCo/Users/HP/Desktop/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%9B%B8%E5%85%B3/AliCoCo/AliCoCo_9.png">
+<meta property="og:image" content="http://example.com/2023/02/08/AliCoCo/AliCoCo_1.png">
+<meta property="og:image" content="http://example.com/2023/02/08/AliCoCo/AliCoCo_3.png">
+<meta property="og:image" content="http://example.com/2023/02/08/AliCoCo/AliCoCo_4.png">
+<meta property="og:image" content="http://example.com/2023/02/08/AliCoCo/AliCoCo_5.png">
+<meta property="og:image" content="http://example.com/2023/02/08/AliCoCo/AliCoCo_6.png">
+<meta property="og:image" content="http://example.com/2023/02/08/AliCoCo/AliCoCo_7.png">
+<meta property="og:image" content="http://example.com/2023/02/08/AliCoCo/AliCoCo_9.png">
 <meta property="article:published_time" content="2023-02-08T10:33:12.000Z">
-<meta property="article:modified_time" content="2023-02-18T07:40:52.198Z">
+<meta property="article:modified_time" content="2023-02-18T07:49:06.580Z">
 <meta property="article:author" content="Super_gxw">
 <meta property="article:tag" content="AliCoCo">
 <meta property="article:tag" content="知识图谱">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/02/08/AliCoCo/Users/HP/Desktop/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%9B%B8%E5%85%B3/AliCoCo/AliCoCo_1.png">
+<meta name="twitter:image" content="http://example.com/2023/02/08/AliCoCo/AliCoCo_1.png">
   
     <link rel="alternative" href="/atom.xml" title="SuperGxw" type="application/atom+xml">
   
@@ -258,7 +258,7 @@
 <li>分类体系（Taxonomy）：分类体系是为了更好地管理上述的原子概念。为了服务于电商领域的概念理解，在这一层中定义了诸如“时间”、“地点”、“动作”、“功能”、“品类”、“IP”等一级分类，并在每个一级分类下细分出子类别，形成一颗树形结构。在每个分类中，包含了分类的实例（instance），即原子概念，如上述的“烧烤”、“户外”和“晴”就分属于“动作 - 消耗性动作”、“地点 - 公共空间”和“时间 - 天气”。同时，不同分类之间有不同的关系（relation），如“品类 - 服饰 - 服装 - 裤子”和“时间 - 季节”之间定义了一个“适用于（季节）”的关系。因此，相应的会有一条三元组实例：&lt;棉裤，适用于，冬季&gt;。</li>
 <li>商品层（Items）：阿里巴巴平台有数十亿的商品和内容，将会和电商概念、原子概念层进行关联。如和“户外烧烤”关联的商品可能包括烧烤架、炭火、食材等。有些商品可以关联到“户外烧烤”这个电商概念，但不一定可以和相应的原子概念“户外”直接关联。对于商品来说，电商概念像是这个商品会被用于的某个场景，而原子概念更像是细粒度的属性，用于刻画商品的特性。</li>
 </ul>
-<p><img src="/2023/02/08/AliCoCo/Users\HP\Desktop\知识图谱相关\AliCoCo\AliCoCo_1.png" alt></p>
+<p><img src="/2023/02/08/AliCoCo/AliCoCo_1.png" alt></p>
 <h3 id="4-原子概念"><a href="#4-原子概念" class="headerlink" title="4 原子概念"></a>4 原子概念</h3><p>具有分类法的原子概念有望准确、全面地描述电子商务中的每一项商品和用户需求。它们是了解客户高层次购物需求的基础。原子概念也是被组织成层次结构。在这一层，主要有两个问题：</p>
 <ul>
 <li>原子概念词汇的挖掘</li>
@@ -268,7 +268,8 @@
 <ul>
 <li><p>融合多种来源的数据化结构，这种方法采用的技术通常是<strong>文本对齐（Ontology Matching）</strong>。在实践中，主要采用基于规则的匹配算法，并结合人工的努力来对每个数据源的分类进行人工校对来进行词汇的融合。（规则+人工映射）</p>
 </li>
-<li><p>通过在大规模的语料库（如搜索查询、产品名称、用户点评、购物指南等）进行自动挖掘来补充分类下的词汇，挖掘特定类的新概念。这个过程，可以表示为序列标记任务，其中输入是单词序列，输出是预定义的标签序列。采用基于BiLSTM+CRF的模型来挖掘发现分类下的新词。由于叶子分类的数量过于庞大，这里使用一级分类作为label，先对词汇进行粗粒度的挖掘。<img src="/2023/02/08/AliCoCo/Users\HP\Desktop\知识图谱相关\AliCoCo\AliCoCo_3.png" alt></p>
+<li><p>通过在大规模的语料库（如搜索查询、产品名称、用户点评、购物指南等）进行自动挖掘来补充分类下的词汇，挖掘特定类的新概念。这个过程，可以表示为序列标记任务，其中输入是单词序列，输出是预定义的标签序列。采用基于BiLSTM+CRF的模型来挖掘发现分类下的新词。由于叶子分类的数量过于庞大，这里使用一级分类作为label，先对词汇进行粗粒度的挖掘。</p>
+<p><img src="/2023/02/08/AliCoCo/AliCoCo_3.png" alt></p>
 <p>上图为 BiLSTM+CRF 模型的简单示意。一个BiLSTM层和一个CRF层。</p>
 <ul>
 <li>BiLSTM（双向LSTM层）：使隐藏状态能够捕获单词的历史和未来上下文信息（单向的LSTM只能保存历史信息，双向的既考虑历史有考虑未来）。</li>
@@ -310,12 +311,12 @@
 </ul>
 <h4 id="5-2-电商概念生成"><a href="#5-2-电商概念生成" class="headerlink" title="5.2 电商概念生成"></a>5.2 电商概念生成</h4><p>之前没有电商概念相关定义，很少有关于从文本中挖掘这类短语的工作。这里提出了一个两阶段的框架来生成电商概念：首先使用两种不同的方法来生成大量可能的额电商概念候选，然后提出一个二元分类模型来识别那些满足标准的概念。</p>
 <h5 id="5-2-1-候选生成"><a href="#5-2-1-候选生成" class="headerlink" title="5.2.1 候选生成"></a>5.2.1 候选生成</h5><p>有两种不同的方法来生成候选概念。（1）从文本中挖掘，这里使用了 AutoPhrase 在大规模的语料库（包括电商生态内的 query log ，商品的标题、评论，还有很多达人商户写的购物攻略等）进行挖掘。（2）使用现有的原子概念组合生成新的候选对象。挖掘并人工审核了一些 pattern 来赋值生成。</p>
-<p><img src="/2023/02/08/AliCoCo/Users\HP\Desktop\知识图谱相关\AliCoCo\AliCoCo_4.png" alt></p>
+<p><img src="/2023/02/08/AliCoCo/AliCoCo_4.png" alt></p>
 <h5 id="5-2-2-电商概念判别"><a href="#5-2-2-电商概念判别" class="headerlink" title="5.2.2 电商概念判别"></a>5.2.2 电商概念判别</h5><p>判断候选短语是否满足电商概念的要求，最大的挑战是前面提到的第三个标准，即合理性。而对于其它四个标准，字符级和单词级的语言模型以及一些启发式规则都能够满足目标。由于机器很难掌握常识，且电商概念判别任务中的候选短语又严重缺少上下文信息使得该问题更具有挑战性。</p>
 <p>为了解决这个问题，作者提出了一种<strong>基于知识增强的深度分类模型</strong>。整体上看是一个 Wide&amp;Deep 结构。在 Deep 侧，利用字级别和词级别的 BiLSTM 来提取特征，同时对于词级别的输入，加入了一些词性特征如 POS tag 和 NER label 等。为了进行知识增强来辅助常识理解，作者将部分词链接到 <a href="[zh.wikipedia.org](https://zh.wikipedia.org/wiki/性感">Wikipedia</a>) 上，如“性感”就可以找到对应的页面。然后将页面上的 gloss（通常是一段简单的介绍）用 Doc2vec 的方式进行 encode 得到知识表达。在经过 Self-attention + Max-pooling 之后将两者融合。在 Wide 侧，主要计算了候选概念的统计特征，包括 BERT 模型产出的困惑度。最后，通过一个全连接层来获得最终衡量一个候选短语是否符合电商概念要求的分数。为了严格控制质量，通过从模型检查的每个输出批中随机抽取一小部分，并要求领域专家手动注释。只有当精度达到一定的阈值时，整批概念才会被添加到 AliCoCo 中。此外，在训练数据中添加标注的样本，迭代提高模型性能。</p>
-<p><img src="/2023/02/08/AliCoCo/Users\HP\Desktop\知识图谱相关\AliCoCo\AliCoCo_5.png" alt></p>
+<p><img src="/2023/02/08/AliCoCo/AliCoCo_5.png" alt></p>
 <h5 id="5-2-3-理解"><a href="#5-2-3-理解" class="headerlink" title="5.2.3 理解"></a>5.2.3 理解</h5><p>将电子商务概念与原子概念建立连接，更好的理解电子商务概念，描述用户需求。顾前文提到的电商概念“户外烧烤”，需要预测“户外”是一个“地点”，“烧烤”是一个“动作”。但“烧烤”在体系中也有可能是一个“电影”，所以这里的难点在于如何进行消歧。把这个任务定义为一个短文本的 NER 任务，由于电商概念普遍只有 2-3 个词组成，缺少上下文也让这个任务具有挑战。</p>
-<p><img src="/2023/02/08/AliCoCo/Users\HP\Desktop\知识图谱相关\AliCoCo\AliCoCo_6.png" alt></p>
+<p><img src="/2023/02/08/AliCoCo/AliCoCo_6.png" alt></p>
 <p>为了解决这个问题，作者设计了一种文本增强的方式，对短文本中待链接的词进行外部上下文的补充，用以为消歧带来额外的信息辅助。如图所示，左边部分是比较常规的特征抽取，右边是一个信息增强的模块。将目标词映射到高质量的外部文本中，通过 Doc2vec 将其周边的上下文信息 encode 成 embedding，最终最为额外的输入融合到最终的表达中。</p>
 <p><strong>文本增强概念编码器</strong></p>
 <p>为了利用表示层中的信息特性，使用了单词级、字符级和位置级特性。具体如下：</p>
@@ -333,12 +334,12 @@ c_i = MaxPooling([c^{i}_{0},\cdots,c^{i}_{j}, \cdots])</script></li>
 h^{'}_{i}=AelfAtt([h_{i};tm_{i}])</script></li>
 </ul>
 <p><strong>模糊CRF层</strong></p>
-<p><img src="/2023/02/08/AliCoCo/Users\HP\Desktop\知识图谱相关\AliCoCo\AliCoCo_7.png" alt></p>
+<p><img src="/2023/02/08/AliCoCo/AliCoCo_7.png" alt></p>
 <p>使用模糊CRF是为了更好地处理歧义问题，因为每个单词的有效类标签不唯一，且概念太短。比如：电子商务概念“乡村半身裙”中的“乡村”这一词与可以与原子概念“空间:乡村”连接，也可以与“风格:乡村”连接。因此，最终概率调整为:</p>
 <script type="math/tex; mode=display">
 L(y|X)=\frac{\sum_{\hat{y}\in Y_{possible}}e^{s(X,\hat{y})}}{\sum_{\hat{y}\in Y_{X}}e^{s(X,\hat{y})}}</script><p>其中$Y_{X}$表示序列$X$的所有可能的标签序列，$Y_{possible}$包含所有可能的标签序列。</p>
 <h3 id="6-商品关联"><a href="#6-商品关联" class="headerlink" title="6 商品关联"></a>6 商品关联</h3><p>商品是电商图谱中最重要的节点。在构建完原子概念和电商概念层之后，最重要的是将电商平台上的所有商品进行关联。前面提到原子概念更像是属性，因而更应该关注商品与电商概念的关联，因为后者表达的是一个用户需求，常常有着较为复杂的语义。此外，电商概念与商品的关联不能直接从对应的原子概念到商品的关联组合得到，因为会出现“语义漂移”的问题。例如“户外烧烤”所需要的商品，往往和属性“户外”没有任何关系。因此可以将这个问题抽象为一个语义匹配（Semantic match） 的问题，因为现阶段暂时只用到<strong>商品侧标题的信息</strong>（实际上商品是一个多模态的结构，有着非常丰富的文本、图像甚至越来越多的商品开始有了短视频的介绍）。这个任务最大的挑战依旧在于电商<strong>概念长度过短</strong>以至于可以使用的信息有限，直接进行匹配，往往会遇到诸如某些不那么重要词对结果产生了巨大的影响等问题。</p>
-<p><img src="/2023/02/08/AliCoCo/Users\HP\Desktop\知识图谱相关\AliCoCo\AliCoCo_9.png" alt></p>
+<p><img src="/2023/02/08/AliCoCo/AliCoCo_9.png" alt></p>
 <p>针对上述难点，作者在语义匹配模型上引入了一些必要的外部知识来提升性能，提出了一种<strong>具有知识感知的深度语义匹配模型</strong>。具体模型如图所示，除了常规的特征抽取，Attention 注意力机制模块等建模商品和电商概念之间的关联外，主要做了两个地方的增强：</p>
 <ul>
 <li>引入了电商概念对应的原子概念的特征表达，增加了类型等结构化信息。</li>
